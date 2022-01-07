@@ -13,7 +13,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let mnistData = MnistData()
-        mnistData.getTrainLabels()
+        let trainLabels = mnistData.getTrainLabels()
+        let testLabels = mnistData.getTestLabels()
     }
 
 

@@ -22,6 +22,19 @@ class MnistData {
         }
     }
     
+    func getTestLabels() -> [UInt8] {
+        print("getData")
+        let url = Bundle.main.url(forResource: "t10k-labels-idx1-ubyte", withExtension: nil)
+        do {
+            let data = try NSData(contentsOf: url!)
+            var array = [UInt8](data!)
+            array = Array(array.dropFirst(8))
+            return array
+        } catch {
+            print("failed")
+        }
+    }
+    
 }
 
 public extension Data {
