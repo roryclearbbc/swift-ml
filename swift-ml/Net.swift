@@ -24,11 +24,18 @@ class Net {
                 for x in 0..<layerWeights[0].count {
                     let range = 1/Double(layerWeights.count).squareRoot()
                     let r = Double.random(in: -range ... range)
-                    print("a")
                 }
             }
             weights.append(layerWeights)
         }
+    }
+    
+    func activationFunction(input: Double) -> Double{
+        return 1.0 / (1.0 + exp(-input)) //sigmoid
+    }
+    
+    func forward(data: [Double]) {
+        
     }
     
 }
