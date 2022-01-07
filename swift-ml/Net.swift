@@ -30,6 +30,14 @@ class Net {
         }
     }
     
+    func resetNodes() {
+        nodes = [[]]
+        for i in 0..<layers.count {
+            let layerNodes = Array(repeating: 0, count: layers[i]) as [Double]
+            nodes.append(layerNodes)
+        }
+    }
+    
     func activationFunction(input: Double) -> Double{
         return 1.0 / (1.0 + exp(-input)) //sigmoid
     }
