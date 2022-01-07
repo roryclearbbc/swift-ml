@@ -51,7 +51,7 @@ class Net {
             for x in 0..<layers[i]{
                 var total : Double = 0
                 for y in 0..<layers[i-1] {
-                    total = total += nodes[i-1][y] * weights[i-1][y][x]
+                    total += nodes[i-1][y] * weights[i-1][y][x]
                 }
                 total = activationFunction(input: total)
                 nodes[i][x] = total
