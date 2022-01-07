@@ -12,29 +12,34 @@ class swift_mlTests: XCTestCase {
 
     var testImages: [[Double]] = []
     var trainImages: [[Double]] = []
+    var testLabels: [Int] = []
+    var net = Net()
     
     override func setUpWithError() throws {
         let mnistData = MnistData()
         let trainLabels = mnistData.getTrainLabels()
-        let testLabels = mnistData.getTestLabels()
+        let testLabelsUint = mnistData.getTestLabels()
         let trainImagesUint = mnistData.getTrainImages()
         let testImagesUint = mnistData.getTestImages()
         
         for i in 0..<testImagesUint.count {
             var image : [Double] = []
             for j in 0..<testImagesUint[i].count {
-                image.append(Double(testImagesUint[i][j]))
+                image.append(Double(testImagesUint[i][j]) / 255)
             }
         }
         
         for i in 0..<trainImagesUint.count {
             var image : [Double] = []
             for j in 0..<trainImagesUint[i].count {
-                image.append(Double(trainImagesUint[i][j]))
+                image.append(Double(trainImagesUint[i][j]) / 255)
             }
         }
         
-        let net = Net()
+        for i in 0..<testLabelsUint.count {
+            testLabels.append(Int(testLabelsUint[i]))
+        }
+        
         net.initWeights()
         
         
@@ -51,7 +56,27 @@ class swift_mlTests: XCTestCase {
     }
 
     func testMnistAccuracy() {
-
+        var correct : Double = 0
+        for i in 0..<testImages.count {
+            net.resetNodes()
+            net.forward(data: testImages[i])
+            let outputLayer = net.nodes[net.layers.count - 1]
+            var output = 0
+            var max = outputLayer[0]
+            for j in 1..<outputLayer.count {
+                if outputLayer[j] > max {
+                    max = outputLayer[j]
+                    output = j
+                }
+            }
+            if(testLabels[i] == output){
+                correct += 1
+            } else{
+                print("\(testLabels[i]) \(output)")
+            }
+        }
+        print(correct)
+        XCTAssertTrue(correct > 1200)
     }
 
 }

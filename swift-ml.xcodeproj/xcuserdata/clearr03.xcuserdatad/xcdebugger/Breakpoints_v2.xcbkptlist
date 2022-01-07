@@ -55,22 +55,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CE4E8D86-CA56-4D39-934D-4D282C9C9126"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "swift-mlTests/swift_mlTests.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "setUpWithError()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "788F4462-E431-4EBB-810E-23B5817D6E1A"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -78,8 +62,8 @@
             filePath = "swift-mlTests/swift_mlTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "testExample()"
             landmarkType = "7">
             <Locations>
@@ -126,10 +110,42 @@
             filePath = "swift-mlTests/swift_mlTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "testExample()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A2615628-E5D1-4B9A-9487-5F2EDC7F908C - 97ef88f6e54af662"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swift_mlTests.swift_mlTests.testExample() -&gt; ()"
+                  moduleName = "swift-mlTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/clearr03/Documents/10percent/swift-ml/swift-mlTests/swift_mlTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "42">
+               </Location>
+               <Location
+                  uuid = "A2615628-E5D1-4B9A-9487-5F2EDC7F908C - 97ef88f6e54af50d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swift_mlTests.swift_mlTests.testExample() -&gt; ()"
+                  moduleName = "swift-mlTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/clearr03/Documents/10percent/swift-ml/swift-mlTests/swift_mlTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "42">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -142,10 +158,42 @@
             filePath = "swift-mlTests/swift_mlTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "setUpWithError()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D21C8CC7-A519-4386-8144-DC85041155AE - 86ecdbfb1c819d08"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swift_mlTests.swift_mlTests.setUpWithError() throws -&gt; ()"
+                  moduleName = "swift-mlTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/clearr03/Documents/10percent/swift-ml/swift-mlTests/swift_mlTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "450">
+               </Location>
+               <Location
+                  uuid = "D21C8CC7-A519-4386-8144-DC85041155AE - 86ecdbfb1c819d4e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swift_mlTests.swift_mlTests.setUpWithError() throws -&gt; ()"
+                  moduleName = "swift-mlTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/clearr03/Documents/10percent/swift-ml/swift-mlTests/swift_mlTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "476">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -158,10 +206,42 @@
             filePath = "swift-mlTests/swift_mlTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "setUpWithError()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BC5D0093-E4EA-465F-BE38-11AF85070099 - 86ecdbfb1c819df1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swift_mlTests.swift_mlTests.setUpWithError() throws -&gt; ()"
+                  moduleName = "swift-mlTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/clearr03/Documents/10percent/swift-ml/swift-mlTests/swift_mlTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "1630">
+               </Location>
+               <Location
+                  uuid = "BC5D0093-E4EA-465F-BE38-11AF85070099 - 86ecdbfb1c819c37"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swift_mlTests.swift_mlTests.setUpWithError() throws -&gt; ()"
+                  moduleName = "swift-mlTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/clearr03/Documents/10percent/swift-ml/swift-mlTests/swift_mlTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "1668">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -190,10 +270,42 @@
             filePath = "swift-mlTests/swift_mlTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
             landmarkName = "setUpWithError()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C1AC5965-45A4-4CDD-8165-639B2DA1EBAC - 86ecdbfb1c819e65"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swift_mlTests.swift_mlTests.setUpWithError() throws -&gt; ()"
+                  moduleName = "swift-mlTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/clearr03/Documents/10percent/swift-ml/swift-mlTests/swift_mlTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "357">
+               </Location>
+               <Location
+                  uuid = "C1AC5965-45A4-4CDD-8165-639B2DA1EBAC - 86ecdbfb1c819eab"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swift_mlTests.swift_mlTests.setUpWithError() throws -&gt; ()"
+                  moduleName = "swift-mlTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/clearr03/Documents/10percent/swift-ml/swift-mlTests/swift_mlTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "383">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
