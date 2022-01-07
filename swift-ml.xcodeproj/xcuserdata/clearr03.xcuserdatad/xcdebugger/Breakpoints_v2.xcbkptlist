@@ -24,15 +24,15 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "CD9F389A-B772-41A1-AE61-1716C90C48E4"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "swift-ml/MnistData.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "getData()"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "getTrainLabels()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
