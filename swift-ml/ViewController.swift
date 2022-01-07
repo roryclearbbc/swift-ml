@@ -17,6 +17,8 @@ class ViewController: UIViewController {
         let testLabels = mnistData.getTestLabels()
         let trainImages = mnistData.getTrainImages()
         let testImages = mnistData.getTestImages()
+        
+        let net = Net()
     }
 
 
