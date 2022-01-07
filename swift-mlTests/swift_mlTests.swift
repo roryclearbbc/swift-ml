@@ -12,13 +12,13 @@ class swift_mlTests: XCTestCase {
 
     override func setUpWithError() throws {
         let mnistData = MnistData()
-        let mnistData = MnistData()
         let trainLabels = mnistData.getTrainLabels()
         let testLabels = mnistData.getTestLabels()
         let trainImages = mnistData.getTrainImages()
         let testImages = mnistData.getTestImages()
         
         let net = Net()
+        net.initWeights()
     }
 
     override func tearDownWithError() throws {

@@ -19,6 +19,8 @@ class ViewController: UIViewController {
         let testImages = mnistData.getTestImages()
         
         let net = Net()
+        net.initWeights()
+        print("a")
     }
 
 

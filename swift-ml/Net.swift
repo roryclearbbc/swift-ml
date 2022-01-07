@@ -17,8 +17,18 @@ class Net {
     var weights = [[[]]]
     var grads = [[[[]]]]
     
-    init() {
-        print("init")
+    func initWeights() {
+        for i in 0..<layers.count {
+            var layerWeights = Array(repeating: Array(repeating: 0, count: layers[i+1]), count: layers[i]) as [[Double]]
+            for y in 0..<layerWeights.count {
+                for x in 0..<layerWeights[0].count {
+                    let range = 1/Double(layerWeights.count).squareRoot()
+                    let r = Double.random(in: -range ... range)
+                    print("a")
+                }
+            }
+            weights.append(layerWeights)
+        }
     }
     
 }
