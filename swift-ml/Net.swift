@@ -13,8 +13,8 @@ class Net {
     let gradsSizee = 0
     let layers = [784,16,10]
     
-    var nodes = [[]]
-    var weights = [[[]]]
+    var nodes: [[Double]] = [[]]
+    var weights: [[[Double]]] = [[[]]]
     var grads = [[[[]]]]
     
     func initWeights() {
