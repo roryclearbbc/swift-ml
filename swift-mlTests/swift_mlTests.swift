@@ -27,6 +27,7 @@ class swift_mlTests: XCTestCase {
             for j in 0..<testImagesUint[i].count {
                 image.append(Double(testImagesUint[i][j]) / 255)
             }
+            testImages.append(image)
         }
         
         for i in 0..<trainImagesUint.count {
@@ -34,6 +35,7 @@ class swift_mlTests: XCTestCase {
             for j in 0..<trainImagesUint[i].count {
                 image.append(Double(trainImagesUint[i][j]) / 255)
             }
+            trainImages.append(image)
         }
         
         for i in 0..<testLabelsUint.count {
@@ -41,6 +43,7 @@ class swift_mlTests: XCTestCase {
         }
         
         net.initWeights()
+        net.resetNodes()
         
         
         
