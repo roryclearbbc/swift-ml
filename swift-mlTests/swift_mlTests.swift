@@ -10,12 +10,29 @@ import XCTest
 
 class swift_mlTests: XCTestCase {
 
+    var testImages: [[Double]] = []
+    var trainImages: [[Double]] = []
+    
     override func setUpWithError() throws {
         let mnistData = MnistData()
         let trainLabels = mnistData.getTrainLabels()
         let testLabels = mnistData.getTestLabels()
-        let trainImages = mnistData.getTrainImages()
-        let testImages = mnistData.getTestImages()
+        let trainImagesUint = mnistData.getTrainImages()
+        let testImagesUint = mnistData.getTestImages()
+        
+        for i in 0..<testImagesUint.count {
+            var image : [Double] = []
+            for j in 0..<testImagesUint[i].count {
+                image.append(Double(testImagesUint[i][j]))
+            }
+        }
+        
+        for i in 0..<trainImagesUint.count {
+            var image : [Double] = []
+            for j in 0..<trainImagesUint[i].count {
+                image.append(Double(trainImagesUint[i][j]))
+            }
+        }
         
         let net = Net()
         net.initWeights()
@@ -29,14 +46,12 @@ class swift_mlTests: XCTestCase {
     }
 
     func testExample() {
-           XCTAssertEqual(1, 2)
+        print("A")
+        XCTAssertEqual(1, 2)
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testMnistAccuracy() {
+
     }
 
 }
