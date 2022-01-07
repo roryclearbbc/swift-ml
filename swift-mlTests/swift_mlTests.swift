@@ -20,6 +20,8 @@ class swift_mlTests: XCTestCase {
         let net = Net()
         net.initWeights()
         
+        
+        
     }
 
     override func tearDownWithError() throws {

@@ -43,6 +43,20 @@ class Net {
     }
     
     func forward(data: [Double]) {
+        for i in 0..<layers[0] {
+            nodes[0][i] = data[i]
+        }
+        
+        for i in 1..<layers.count {
+            for x in 0..<layers[i]{
+                var total : Double = 0
+                for y in 0..<layers[i-1] {
+                    total = total += nodes[i-1][y] * weights[i-1][y][x]
+                }
+                total = activationFunction(input: total)
+                nodes[i][x] = total
+            }
+        }
         
     }
     
