@@ -13,11 +13,12 @@ class swift_mlTests: XCTestCase {
     var testImages: [[Double]] = []
     var trainImages: [[Double]] = []
     var testLabels: [Int] = []
+    var trainLabels: [Int] = []
     var net = Net()
     
     override func setUpWithError() throws {
         let mnistData = MnistData()
-        let trainLabels = mnistData.getTrainLabels()
+        let trainLabelsUint = mnistData.getTrainLabels()
         let testLabelsUint = mnistData.getTestLabels()
         let trainImagesUint = mnistData.getTrainImages()
         let testImagesUint = mnistData.getTestImages()
@@ -41,6 +42,10 @@ class swift_mlTests: XCTestCase {
             testLabels.append(Int(testLabelsUint[i]))
         }
         
+        for i in 0..<trainLabelsUint.count {
+            trainLabels.append(Int(trainLabelsUint[i]))
+        }
+        
         net.initWeights()
         net.resetNodes()
         
@@ -60,6 +65,14 @@ class swift_mlTests: XCTestCase {
     
     func testMnistAccuracy() {
         var correct : Double = 0
+        
+        for i in 0..<trainImages.count {
+            print("training \(i)")
+            net.resetNodes()
+            net.resetGrads()
+            net.forward(data: trainImages[i])
+            net.backprop(loss: net.getLoss(answer: trainLabels[i]))
+        }
         
         for i in 0..<testImages.count {
             net.resetNodes()

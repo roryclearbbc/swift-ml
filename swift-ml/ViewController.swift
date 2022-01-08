@@ -12,15 +12,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let mnistData = MnistData()
-        let trainLabels = mnistData.getTrainLabels()
-        let testLabels = mnistData.getTestLabels()
-        let trainImages = mnistData.getTrainImages()
-        let testImages = mnistData.getTestImages()
         
-        let net = Net()
-        net.initWeights()
-        print("a")
     }
 
 

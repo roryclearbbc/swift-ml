@@ -8,7 +8,7 @@
 import Foundation
 
 class Net {
-    let learningRate = 0.1
+    let learningRate = 0.05
     let momentum = 0.5
     let gradsSizee = 0
     let layers = [784,16,10]
@@ -25,6 +25,7 @@ class Net {
                 for x in 0..<layerWeights[0].count {
                     let range = 1/Double(layerWeights.count).squareRoot()
                     let r = Double.random(in: -range ... range)
+                    layerWeights[y][x] = r
                 }
             }
             weights.append(layerWeights)
@@ -32,6 +33,7 @@ class Net {
     }
     
     func resetGrads() {
+        grad = [[[]]]
         grad.remove(at: 0)
         for i in 0..<layers.count-1 {
             var layerGrads = Array(repeating: Array(repeating: 0, count: layers[i+1]), count: layers[i]) as [[Double]]
@@ -103,7 +105,7 @@ class Net {
                 for x in 0..<weights[r][y].count {
                     var totalError: Double = 0
                     for n in 0..<nodes[r+2].count {
-                        totalError += (weights[r+1][x][n]*grad[r+1][x][n])/nodes[r+2].count
+                        totalError += (weights[r+1][x][n]*grad[r+1][x][n])/(Double(nodes[r+2].count))
                     }
                     totalError = totalError * derivateActivationFunction(input: nodes[r+1][x]) * nodes[r][y]
                     grad[r][y][x] += totalError
