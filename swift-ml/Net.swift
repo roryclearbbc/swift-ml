@@ -15,7 +15,7 @@ class Net {
     
     var nodes: [[Double]] = [[]]
     var weights: [[[Double]]] = [[[]]]
-    var grads = [[[[]]]]
+    var grad: [[[Double]]] = [[[]]]
     
     func initWeights() {
         weights.remove(at: 0)
@@ -28,6 +28,14 @@ class Net {
                 }
             }
             weights.append(layerWeights)
+        }
+    }
+    
+    func resetGrads() {
+        grad.remove(at: 0)
+        for i in 0..<layers.count-1 {
+            var layerGrads = Array(repeating: Array(repeating: 0, count: layers[i+1]), count: layers[i]) as [[Double]]
+            grad.append(layerGrads)
         }
     }
     
