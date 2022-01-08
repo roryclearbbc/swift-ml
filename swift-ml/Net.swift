@@ -112,8 +112,8 @@ class Net {
         }
         
         for r in 0..<numberOfLayers-1 {
-            for y in 0..weights[r].count {
-                for x in 0..weights[r][y].count {
+            for y in 0..<weights[r].count {
+                for x in 0..<weights[r][y].count {
                     weights[r][y][x] -= learningRate * grad[r][y][x]
                 }
             }
