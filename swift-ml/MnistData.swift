@@ -29,6 +29,7 @@ class MnistData {
     func getTrainImages() -> [[UInt8]]{
         let url = Bundle.main.url(forResource: "train-images-idx3-ubyte", withExtension: nil)
         var out : [[UInt8]] = [[]]
+        out.remove(at: 0)
         let data = NSData(contentsOf: url!)
         var array = [UInt8](data!)
         array = Array(array.dropFirst(16))
@@ -45,6 +46,7 @@ class MnistData {
     func getTestImages() -> [[UInt8]]{
         let url = Bundle.main.url(forResource: "t10k-images-idx3-ubyte", withExtension: nil)
         var out : [[UInt8]] = [[]]
+        out.remove(at: 0)
         let data = NSData(contentsOf: url!)
         var array = [UInt8](data!)
         array = Array(array.dropFirst(16))

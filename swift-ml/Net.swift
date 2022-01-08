@@ -32,6 +32,7 @@ class Net {
     
     func resetNodes() {
         nodes = [[]]
+        nodes.remove(at: 0)
         for i in 0..<layers.count {
             let layerNodes = Array(repeating: 0, count: layers[i]) as [Double]
             nodes.append(layerNodes)

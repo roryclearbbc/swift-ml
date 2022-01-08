@@ -21,7 +21,6 @@ class swift_mlTests: XCTestCase {
         let testLabelsUint = mnistData.getTestLabels()
         let trainImagesUint = mnistData.getTrainImages()
         let testImagesUint = mnistData.getTestImages()
-        
         for i in 0..<testImagesUint.count {
             var image : [Double] = []
             for j in 0..<testImagesUint[i].count {
