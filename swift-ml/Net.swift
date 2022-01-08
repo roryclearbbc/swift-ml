@@ -62,4 +62,22 @@ class Net {
         
     }
     
+    func getLoss(answer: Int) -> [Double] {
+        let output = nodes[nodes.count - 1]
+        var loss = Array(repeating: 0, count: output.count) as [Double]
+        for i in 0..<output.count {
+            if(i == answer) {
+                loss[i] = 1 - output[i]
+            }else{
+                loss[i] = 0 - output[i]
+            }
+        }
+        return loss
+    }
+    
+    func backprop(loss: [Double]) {
+        let numberOfLayers = layers.count
+        
+    }
+    
 }
