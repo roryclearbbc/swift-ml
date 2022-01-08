@@ -18,6 +18,7 @@ class Net {
     var grads = [[[[]]]]
     
     func initWeights() {
+        weights.remove(at: 0)
         for i in 0..<layers.count-1 {
             var layerWeights = Array(repeating: Array(repeating: 0, count: layers[i+1]), count: layers[i]) as [[Double]]
             for y in 0..<layerWeights.count {

@@ -73,8 +73,6 @@ class swift_mlTests: XCTestCase {
             }
             if(testLabels[i] == output){
                 correct += 1
-            } else{
-                print("\(testLabels[i]) \(output)")
             }
         }
         print(correct)
