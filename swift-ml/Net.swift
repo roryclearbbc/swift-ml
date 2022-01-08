@@ -52,6 +52,10 @@ class Net {
         return 1.0 / (1.0 + exp(-input)) //sigmoid
     }
     
+    func derivateActivationFunction(input: Double) -> Double {
+        return input * (1 - input) //sigmoid
+    }
+    
     func forward(data: [Double]) {
         for i in 0..<layers[0] {
             nodes[0][i] = data[i]
@@ -85,6 +89,35 @@ class Net {
     
     func backprop(loss: [Double]) {
         let numberOfLayers = layers.count
+        resetGrads()
+        for y in 0..<weights[numberOfLayers - 2].count {
+            let prevOutput = nodes[numberOfLayers - 2][y]
+            for x in 0..<weights[numberOfLayers - 2][y].count {
+                let output = nodes[numberOfLayers - 1][x]
+                let dedw = -loss[x] * derivateActivationFunction(input: output) * prevOutput
+                grad[numberOfLayers - 2][y][x] += dedw
+            }
+        }
+        for r in stride(from: numberOfLayers - 3, to: 0, by: -1) {
+            for y in 0..<weights[r].count {
+                for x in 0..<weights[r][y].count {
+                    var totalError = 0
+                    for n in 0..<nodes[r+2].count {
+                        totalError += (weights[r+1][x][n]*grad[r+1][x][n])/nodes[r+2].count
+                    }
+                    totalError = totalError * derivateActivationFunction(input: nodes[r+1][x]) * nodes[r][y]
+                    grad[r][y][x] += totalError
+                }
+            }
+        }
+        
+        for r in 0..<numberOfLayers-1 {
+            for y in 0..weights[r].count {
+                for x in 0..weights[r][y].count {
+                    weights[r][y][x] -= learningRate * grad[r][y][x]
+                }
+            }
+        }
         
     }
     
