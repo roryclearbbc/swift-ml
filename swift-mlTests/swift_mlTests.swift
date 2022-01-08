@@ -56,9 +56,11 @@ class swift_mlTests: XCTestCase {
         print("A")
         XCTAssertEqual(1, 2)
     }
-
+    
+    
     func testMnistAccuracy() {
         var correct : Double = 0
+        
         for i in 0..<testImages.count {
             net.resetNodes()
             net.forward(data: testImages[i])

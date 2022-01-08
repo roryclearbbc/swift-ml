@@ -101,7 +101,7 @@ class Net {
         for r in stride(from: numberOfLayers - 3, to: 0, by: -1) {
             for y in 0..<weights[r].count {
                 for x in 0..<weights[r][y].count {
-                    var totalError = 0
+                    var totalError: Double = 0
                     for n in 0..<nodes[r+2].count {
                         totalError += (weights[r+1][x][n]*grad[r+1][x][n])/nodes[r+2].count
                     }
